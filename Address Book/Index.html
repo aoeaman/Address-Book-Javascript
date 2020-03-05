@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Address Book</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="Validation.js"></script>
+    <script type="text/javascript" src="User.js"></script>
+    <script type="text/javascript" src="Globals.js"></script>
+    <script type="text/javascript" src="UserService.js"></script>
+</head>
+<body>
+        <div id="header">
+            <span id="title">Address Book</span>
+        </div>
+
+        <div id="navbar">
+            <ul>
+                <li><a onclick="Home();" href="javascript:void(0);">Home</a> </li>
+                <li> <a onclick="Add()" href="javascript:void(0);">+Add</a></li>
+            </ul>
+
+            <div id="Bing-Icon">
+                <a onclick="jsfunction()" href="javascript:void(0);"><img src="bing.png" /></a>
+            </div>
+
+        </div>
+        
+        <div id="container">
+            <div id="col-30" onload="GetContacts">
+                <div id="d1">
+                    <p id="p1">Contacts</p>                   
+                </div>
+                <div id="contactpanel">
+
+                </div>
+            </div>
+
+            <div id="col-70">
+
+                <div id="homepage">
+                    <h1>Weclome to Address Book</h1>
+                </div>
+
+                <div id="info">
+
+                    <div id="showdata">
+                        <div id="username"></div>
+                        <br />
+                        <div><span> Email : </span><span id="usermailid"></span> </div>
+                        <br />
+                        <div><span> Mobile : </span><span id="usermobile"></span></div>
+                        <div><span>Landline: </span> <span id="userlandline"></span></div> <br />
+                        <div><span>Website:</span><span id="userwebsite"></span></div> <br />
+                        <div><span class="A">Address:</span> <span class="B" id="useraddress"></span></div>
+                    </div>
+                
+                    <div id="options">
+                        <a href="javascript:void(0);" onclick="Update()"><img class="img" src="edit1.jpg" /> Edit</a>
+                        <a href="javascript:void(0);" onclick="Delete()"><img class="img" src="delete1.png" /> Delete</a>
+                    </div>               
+                
+                </div>
+
+                <div id="add">
+                    <form class="form" name="form1">
+                        <div>
+                            <label>Name *</label>
+                            <input type="text" name="name" id="enteredname" />
+                        </div>
+
+                        <div>
+                            <label>Email *</label>
+                            <input type="text" name="email" id="email" />
+                        </div>
+                        <div>
+                            <div style="width:40%">
+                                <label>Mobile *</label>
+                                <input type="text" name="mobile" id="mobile" />
+                            </div>
+                            <div style="float:right">
+                                <label>Landline</label>
+                                <input type="text" name="landline" id="landline" />
+                            </div>
+
+                        </div>
+                        <div >
+                            <label>Website</label>
+                            <input type="text" name="website" id="website" />
+                        </div>
+                        <div >
+                            <label>Address</label>
+                            <textarea id="address" name="address" rows="3"></textarea>
+                        </div>
+
+
+                        <button type="button" id="add-button" onclick="Insert()"> Add </button>
+                        <button type="button" id="update-button"> Update </button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+</body>
+</html>
