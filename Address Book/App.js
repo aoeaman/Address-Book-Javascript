@@ -64,18 +64,17 @@ function AddDetails(Email, Name, Mobile, divNode) {
 
 function Update() {
     Add();
-    if (isInputValid()) {
+    
         let user = getUser(selectedcontact);
         let Updatebtn = document.getElementById("update-button");
         let Addbtn = document.getElementById("add-button");
         Addbtn.style.display = "none";
         Updatebtn.style.display = "block";
-        Updatebtn.onclick = function () { UpdateDetails(User); getDetails(User.id); }
-        updateSet(user)
-    }
-    else {
-        alert("Worng Inputs")
-    }
+	
+        Updatebtn.onclick = function () {if (isInputValid()) 
+		{ UpdateDetails(User); getDetails(User.id);updateSet(user)}
+    			else {alert("Worng Inputs")} }
+        
 	
 }
 function getDetails(element) {
